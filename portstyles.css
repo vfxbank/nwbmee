@@ -1,0 +1,169 @@
+body {
+    font-family: 'Staatliches', sans-serif;
+    letter-spacing: .05rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+header {
+    background: transparent;
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: center; /* Center the contents horizontally */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative; /* Make space for the logo */
+}
+
+.header .logo {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 2rem;
+    position: absolute; /* Position logo absolutely */
+    left: 2rem; /* Adjust as needed */
+}
+
+header nav {
+    display: flex;
+    justify-content: center; /* Center the nav items */
+    flex: 1; /* Make the nav take up available space */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 9rem;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#project {
+    padding: 80px 20px 20px;
+    background: #1f1f1f;
+}
+
+.container {
+    padding-top: 1rem;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.video-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 315px; /* Adjust height as needed */
+    max-width: 800px; /* Limit max-width for larger screens */
+    border: none;
+}
+
+.screenshots {
+    display: grid;
+    height: fit-content;
+    margin: 40px 0;
+}
+
+.screenshots h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: 500px 500px 500px;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto ;
+    justify-content: left;
+    grid-auto-flow: column;
+    gap: 10; /* Increase spacing between images */
+    /* flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+}
+
+.image {
+    flex: 1 1 30%; /* Allow each image to take up 30% of the container width */
+    max-width: 30%; /* Ensure images don't overflow the container */
+    box-sizing: border-box;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Add a bit of rounding to the image corners */
+}
+
+.project-details {
+    font-size: 30px;
+    margin-top: 10px;
+}
+.project-details2 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.project-details h2 {
+    margin-bottom: 10px;
+}
+  
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  
+  span.chunk {
+    position: relative;
+  }
+  
+  span.chunk:before {
+    content: attr(data-chord);
+    position: absolute;
+    top: -25px;
+    color: rgb(255, 255, 255);
+  }
+
+footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer .social-media a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .image-gallery {
+        flex-direction: column;
+    }
+
+    .image {
+        max-width: 100%; /* Ensure full width on small screens */
+    }
+}
