@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>latestBook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="bookstyles.css">
+</head>
+<body>
+
+<div class="music-player">
+    <div class="image-container">
+        <img src="https://dl.dropbox.com/scl/fi/kdsq5pnyzoin8ggrdq9w6/cover.png?rlkey=8iww8soz7lxgefopwe4d82dkb&dl=1" alt="Music Cover" class="music-cover">
+        <div class="background-text">Latest Book
+            <hr>
+        </div>
+        <div class="des-text">Movie Genre : Romantic, Drama</div>
+    </div>
+    <div class="volume-controls">
+        <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5">
+        <span id="volume" class="volume-indicator">50</span>
+    </div>
+    <audio id="audio"></audio>
+    <div class="music-title">latestBook</div>
+    <div class="control-buttons">
+        <button class="prev-button" id="prevButton">◁</button>
+        <button class="play-button" id="playButton">▶</button>
+        <button class="next-button" id="nextButton">▷</button>
+    </div>
+    <div class="time-controls">
+        <span id="playtime" class="time-indicator">0:00</span>
+        <input type="range" id="currentTime" min="0" value="0">
+        <span id="endtime" class="time-indicator">0:00</span>
+    </div>
+    <ul class="playlist" id="playlist">
+        <li data-src="https://dl.dropbox.com/scl/fi/jpr1epq5apg09gq0egrex/009_remaster_mastered.wav?rlkey=48jpnrwc9clihp8gqjwdj00vy&dl=1">Most Important Journey</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/ybh0rfvd294bmvzviu2xe/001_remaster_mastered.wav?rlkey=c8knq76y9za5cxmsnumzzy4sc&dl=1">Important Journey</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/j2nfhlw1wmh7co8mzlx4m/002_remaster_mastered.wav?rlkey=cv4159tlr6ieliutzdkr9adud&dl=1">Steal The Truth</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/7e6y7nkbwh2fpksb9cr9z/003_remaster_mastered.wav?rlkey=olp3ewyj0ej637vw3u6szl7ta&dl=1">Revealed</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/em6eawt08g4sjkh251qox/004_remaster_mastered.wav?rlkey=j48n4arhw3c6tghswwfexp44k&dl=1">Like We Were</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/y4mo71bgmyv40vh3ps645/005_new_remaster_mastered.wav?rlkey=eanr8nlkrm0apxv2q2thsetd0&dl=1">Support</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/40vwedw89grawh27wrcd1/006_remaster_mastered.wav?rlkey=tjj8rfrh0z3kgd5c53vf39kwi&dl=1">Don't Know Why</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/k4qudye98azfxo00vmcth/007_remaster_mastered.wav?rlkey=d74283coxdt7hnl92rpbs8uek&dl=1">Understand</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/xhttagoxscd24b3uvzwli/008_remaster_mastered.wav?rlkey=nrk660lwzed6ugww2okyvq1q1&dl=1">From Now On</li>
+    </ul>
+</div>
+
+<script src="https://dl.dropbox.com/scl/fi/pzpz680mt6v2ldhlepeg5/script.js?rlkey=lrh8mx8097llucjdi9syk00xr&dl=1"></script>
+
+</body>
+</html>

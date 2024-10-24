@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mookrata</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="moostyles.css">
+</head>
+<body>
+
+<div class="music-player">
+    <div class="image-container">
+        <img src="https://dl.dropbox.com/scl/fi/leqvnmnio821jv63kvpu5/cover.jpg?rlkey=qlwwoz9ed06zvosdqnlpbqk4k&dl=1" alt="Music Cover" class="music-cover">
+        <div class="background-text">Mookrata
+            <hr>
+        </div>
+        <div class="des-text">Movie Genre : Romantic, Comedy, Thriller</div>
+    </div>
+    <div class="volume-controls">
+        <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5">
+        <span id="volume" class="volume-indicator">50</span>
+    </div>
+    <audio id="audio"></audio>
+    <div class="music-title">mookrata</div>
+    <div class="control-buttons">
+        <button class="prev-button" id="prevButton">◁</button>
+        <button class="play-button" id="playButton">▶</button>
+        <button class="next-button" id="nextButton">▷</button>
+    </div>
+    <div class="time-controls">
+        <span id="playtime" class="time-indicator">0:00</span>
+        <input type="range" id="currentTime" min="0" value="0">
+        <span id="endtime" class="time-indicator">0:00</span>
+    </div>
+    <ul class="playlist" id="playlist">
+        <li data-src="https://dl.dropbox.com/scl/fi/sdrtvl8ove5u586q7gh5b/newyear.mp3?rlkey=10e0fy7yx5y1vst3fm302azc2&dl=1">New Year</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/p6pxkmr9c9ho21qfkxbtv/forgetworking.mp3?rlkey=7ydx9x3jen3w85m6pr5sllqdu&dl=1">What's Going On?</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/dnp0w4k3as5dqit9velai/Newyearparty.mp3?rlkey=r6f26i1rdhyb7etalsa84y3v1&dl=1">New Year Party</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/fkk0qzh9rwl222bywjnq5/Fireworks.mp3?rlkey=tn68xypnt4dgul6p73664dqng&dl=1">Fireworks</li>
+    </ul>
+</div>
+
+<script src="https://dl.dropbox.com/scl/fi/a01op1j6avauwtkt493s0/script.js?rlkey=bnxm948f5vwbh4nwtx1zdedsb&dl=1"></script>
+
+</body>
+</html>

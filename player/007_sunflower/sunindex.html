@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sunflower</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="sunstyles.css">
+</head>
+<body>
+
+<div class="music-player">
+    <div class="image-container">
+        <img src="https://dl.dropbox.com/scl/fi/7l74cm6og0nj9wycgrnn1/cover.jpg?rlkey=koek54n2o2bhf8yg43m2wrxuh&dl=1" alt="Music Cover" class="music-cover">
+        <div class="background-text">Sunflower
+            <hr>
+        </div>
+        <div class="des-text">Movie Genre : Horror</div>
+    </div>
+    <div class="volume-controls">
+        <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5">
+        <span id="volume" class="volume-indicator">50</span>
+    </div>
+    <audio id="audio"></audio>
+    <div class="music-title">sunflower</div>
+    <div class="control-buttons">
+        <button class="prev-button" id="prevButton">◁</button>
+        <button class="play-button" id="playButton">▶</button>
+        <button class="next-button" id="nextButton">▷</button>
+    </div>
+    <div class="time-controls">
+        <span id="playtime" class="time-indicator">0:00</span>
+        <input type="range" id="currentTime" min="0" value="0">
+        <span id="endtime" class="time-indicator">0:00</span>
+    </div>
+    <ul class="playlist" id="playlist">
+        <li data-src="https://dl.dropbox.com/scl/fi/2hvwlfcsfdfbty9qeb3so/sun1.mp3?rlkey=8yg1tq61k0yx5x3w9aavfbvbl&dl=1">Incident Next to The Front Door</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/fbnro5h6vofw0890eoc4z/sun2.mp3?rlkey=imodbt34j8soz5xgysjxqn2oz&dl=1">Pain(t)</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/ztthjzke97usek6uuq4c4/sun3.mp3?rlkey=yfj1wwz4lv84ear05kgxrb8fy&dl=1">Seriously?</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/3wyn2ojkeuvqixkby0igm/sun4_2.mp3?rlkey=r9u0r55xk43f9z11h7ier4moq&dl=1">Forced Into A Bad Dream</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/uq0okvl0gaxp06d1esud2/sun5.mp3?rlkey=evmw21ly6rtvstnnxi4a4xiqh&dl=1">Oh! My Hand</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/a873r98rzg30czwshlxmp/sun6.mp3?rlkey=av4v87b9nk9gknryhklxszg5m&dl=1">Something Terrible Happened</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/aoyohbr30jbzpz08gdu46/sun_teaser_Master.mp3?rlkey=jfuilh05qz5zw7j11zhljuqtn&dl=1">Sunflower Teaser</li>
+    </ul>
+</div>
+
+<script src="https://dl.dropbox.com/scl/fi/zoffgpdcdwgtf9dssugkq/script.js?rlkey=qlqran5uypc3y6hlub86i4my7&dl=1"></script>
+
+</body>
+</html>

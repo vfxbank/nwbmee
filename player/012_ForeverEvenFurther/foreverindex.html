@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ForeverEvenFurther</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="foreverstyles.css">
+</head>
+<body>
+
+<div class="music-player">
+    <div class="image-container">
+        <img src="https://dl.dropbox.com/scl/fi/2j3otf1mk4zeakszz1lg2/cover.jpg?rlkey=308wjemwmervla5lg866nv68f&dl=1" alt="Music Cover" class="music-cover">
+        <div class="background-text">Forever Even Further
+            <hr>
+        </div>
+        <div class="des-text">Music Genre : Peaceful, Adventure</div>
+    </div>
+    <div class="volume-controls">
+        <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5">
+        <span id="volume" class="volume-indicator">50</span>
+    </div>
+    <audio id="audio"></audio>
+    <div class="music-title">ForeverEvenFurther</div>
+    <div class="control-buttons">
+        <button class="prev-button" id="prevButton">◁</button>
+        <button class="play-button" id="playButton">▶</button>
+        <button class="next-button" id="nextButton">▷</button>
+    </div>
+    <div class="time-controls">
+        <span id="playtime" class="time-indicator">0:00</span>
+        <input type="range" id="currentTime" min="0" value="0">
+        <span id="endtime" class="time-indicator">0:00</span>
+    </div>
+    <ul class="playlist" id="playlist">
+        <li data-src="https://dl.dropbox.com/scl/fi/r0wy322its0txv16nib7f/ADJ_remake_master002.mp3?rlkey=o65wv2u98cs5qi9rmtwbsmozc&dl=1">Forever Even Further</li>
+    </ul>
+</div>
+
+<script src="https://dl.dropbox.com/scl/fi/0m9xopdjglekyzbu46hmf/script.js?rlkey=gbp1dne28x80mdumr06rl40yk&dl=1"></script>
+
+</body>
+</html>

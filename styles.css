@@ -1,5 +1,6 @@
 /* Global Styles */
 html {
+    height: fit-content;
     scroll-behavior: smooth;
     height: 100%;
 }
@@ -7,9 +8,8 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background: #1f1f1f;
     font-family: 'Nunito Sans', sans-serif;
-    color: #ffffff;
+    background-color: #e7e6e6;
     overflow-x: hidden;
     overflow-y: auto;
     height: fit-content;
@@ -239,7 +239,7 @@ header.visible {
 
 .nav-about, .nav-showreel, .nav-port, .nav-gal, .nav-work {
     font-family: 'Staatliches', sans-serif;
-    color: #f0f0f0;
+    color: #000000;
     text-decoration: none;
 }
 
@@ -274,7 +274,7 @@ header a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 30vh;
     position: relative;
     z-index: 2;
     overflow: hidden;
@@ -422,23 +422,23 @@ section p {
 
 /* Alternating Backgrounds */
 section:nth-of-type(even) {
-    background: #1f1f1f;
+    background-color: #e7e6e6;
 }
 
 section:nth-of-type(odd) {
-    background: #1f1f1f;
+    background-color: #e7e6e6;
 }
 
 /* Portfolio Section Photo Grid */
 .photo-grid {
-    display: flex;
+    background-color: #e7e6e6;
+    display: grid;
+    justify-content: center;
     justify-items: center;
-    gap: 20px;
-    grid-row: 2;
-    grid-auto-columns: auto;
-    align-items: center;
-    height: fit-content;
-    margin-top: 2rem;
+    gap: 1px;
+    grid-template-columns: 380px 380px 380px 380px 380px;
+    grid-template-rows: 1000px 1000px 1000px;
+
 }
 
 .photo-item {
@@ -474,16 +474,14 @@ section:nth-of-type(odd) {
     width: fill;
     height: fit-content;
     padding: 60px 20px;
-    background: #000000;
+    background: #ffffff;
     text-align: center;
-    color: #dcdcdc;
-    border-top: 1px solid #444;
 }
 
 #social-media h2 {
-    font-size: 0.7rem;
+    font-size: 1rem;
     margin-bottom: 1rem;
-    color: #8a8a8a;
+    color: #000000;
     font-weight: 700;
 }
 
@@ -496,9 +494,10 @@ section:nth-of-type(odd) {
 }
 
 .wrap {
+    color: #ddd;
+    height: fit-content;
     font-family: 'Staatliches', sans-serif;
     font-weight: 200;
-    font-size: 10%;
 }
 
 .social-icons a {

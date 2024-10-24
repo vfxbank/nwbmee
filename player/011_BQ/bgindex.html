@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>bq</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="bgstyles.css">
+</head>
+<body>
+
+<div class="music-player">
+    <div class="image-container">
+        <img src="https://dl.dropbox.com/scl/fi/wj9mo3sgcqcg18egncllk/cover.jpg?rlkey=eufr46tsarizuh5m4owva3y6y&dl=1" alt="Music Cover" class="music-cover">
+        <div class="background-text">Burger Queen
+            <hr>
+        </div>
+        <div class="des-text">Movie Genre : Action, Comedy, Adventure</div>
+    </div>
+    <div class="volume-controls">
+        <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5">
+        <span id="volume" class="volume-indicator">50</span>
+    </div>
+    <audio id="audio"></audio>
+    <div class="music-title">bq</div>
+    <div class="control-buttons">
+        <button class="prev-button" id="prevButton">◁</button>
+        <button class="play-button" id="playButton">▶</button>
+        <button class="next-button" id="nextButton">▷</button>
+    </div>
+    <div class="time-controls">
+        <span id="playtime" class="time-indicator">0:00</span>
+        <input type="range" id="currentTime" min="0" value="0">
+        <span id="endtime" class="time-indicator">0:00</span>
+    </div>
+    <ul class="playlist" id="playlist">
+        <li data-src="https://dl.dropbox.com/scl/fi/9t9nqe2qppbwyafa6heod/BQ_1M1.mp3?rlkey=ojtlvdm5wzvohmx4br38croip&dl=1">Why Am I Running?</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/qh6verw2h0d86lbo4kdlt/BQ_1M2b.mp3?rlkey=4qt8vvklfxt12p664txoprtdg&dl=1">Meeting</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/jw1m40aulgzxzxeia2jv8/BQ_1M3.mp3?rlkey=dukg5ulne9wuf9tqeedt1el8g&dl=1">The Burger Queen Project</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/qqu4zjsccjzz9fx1osjwh/BQ_1M5.mp3?rlkey=sv25aomgb5v1gdks88tshg25q&dl=1">CAUTION! WET FLOOR</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/pzxxejaod53nknbajjvgi/BQ_1M6b.mp3?rlkey=d0emvhkm1xcb8kuu5b9uwq969&dl=1">The Burger of the Queen</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/xsdde3cozy3ppjzc2bt30/BQ_1M7b.mp3?rlkey=bp7pmxx86n10ejbhhctl6l5a5&dl=1">Stairway to Get Lunch</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/4vhqoqehnyb7h1j90pbcl/BQ_1M9.mp3?rlkey=whfy5vs2mudx3yls0yek8swzk&dl=1">This Is Why I Was Running</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/o09i9b8gznak58zpqbuo3/BQ_1M10.mp3?rlkey=p5vckwuh8m7jjzthlehwdfqnh&dl=1">Yes!! Chef</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/c90its3syrwvtkt25yghv/BQ_1M11.mp3?rlkey=pf9z5oz71ocdsl5h7edgoh93r&dl=1">Grilling (not in the film)</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/7dtdqk1ejdaqv8zx0xj6u/BQ_1M12.mp3?rlkey=fgt0tx9lmrpxm08en3frq6890&dl=1">Some Burger Idea</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/vfmp7vnnhmgqpk6u3zvxf/BQ_1M13.mp3?rlkey=hh20xwd0gezfvmnzgls90pv99&dl=1">The Taste...sh...Chessburger</li>
+    </ul>
+</div>
+
+<script src="https://dl.dropbox.com/scl/fi/fnuzrsrwluglvocicl8g3/script.js?rlkey=edasg5shsnz18x35k4dzloivd&dl=1"></script>
+
+</body>
+</html>

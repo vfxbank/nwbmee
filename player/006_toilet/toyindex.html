@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>toilet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="toistyles.css">
+</head>
+<body>
+
+<div class="music-player">
+    <div class="image-container">
+        <img src="https://dl.dropbox.com/scl/fi/j5kbf871r2x59lq2udjo2/cover.png?rlkey=i22ge1341a63r5fo13zamitaz&dl=1" alt="Music Cover" class="music-cover">
+        <div class="background-text">Toilet In Peace
+            <hr>
+        </div>
+        <div class="des-text">Movie Genre : Action, Thriller</div>
+    </div>
+    <div class="volume-controls">
+        <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5">
+        <span id="volume" class="volume-indicator">50</span>
+    </div>
+    <audio id="audio"></audio>
+    <div class="music-title">toilet</div>
+    <div class="control-buttons">
+        <button class="prev-button" id="prevButton">◁</button>
+        <button class="play-button" id="playButton">▶</button>
+        <button class="next-button" id="nextButton">▷</button>
+    </div>
+    <div class="time-controls">
+        <span id="playtime" class="time-indicator">0:00</span>
+        <input type="range" id="currentTime" min="0" value="0">
+        <span id="endtime" class="time-indicator">0:00</span>
+    </div>
+    <ul class="playlist" id="playlist">
+        <li data-src="https://dl.dropbox.com/scl/fi/h5zb3lec5bcxoikox0bcw/01m00_mastered.mp3?rlkey=iderthiwg4zvbr3k7e5h0ijy3&dl=1">Hallway Chasing</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/p9yo5ik7prdzl5g3oueak/02m00_mastered.mp3?rlkey=3e9jc9l2a0wsk91fz1g3u1mtx&dl=1">Hide</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/0x94nyjapxpbcix9op3wx/03m00_mastered_fixlenght.mp3?rlkey=ezcn1w8haq5fsdp1umsmvssum&dl=1">Killer VS Murderer</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/9usgg8noskzwzgnf9w9tc/04m00_mastered_fixlenght.mp3?rlkey=aztahydamnb1ol21p724u4kbc&dl=1">Bathroom Massacre</li>
+        <li data-src="https://dl.dropbox.com/scl/fi/nyadi1plj68x7vjuhmxke/04nihonversion.mp3?rlkey=nir0m5srp4t1g7ywgpgizjyew&dl=1">Bathroom Massacre (japan version)</li>
+    </ul>
+</div>
+
+<script src="https://dl.dropbox.com/scl/fi/xod5qzndn2lx417vcza33/script.js?rlkey=cmfkj258b9g7250t106nivl5y&dl=1"></script>
+
+</body>
+</html>

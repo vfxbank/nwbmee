@@ -1,0 +1,512 @@
+/* Global Styles */
+html {
+    height: fit-content;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #e7e6e6;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: fit-content;
+}
+
+.music-player {
+    background-color: #fff;
+    width: fit-content;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    width: 100vh;
+    max-width: 300px;
+    margin-bottom: 10px;
+    perspective: 1000px;
+}
+
+.music-cover {
+    width: 100%;
+    border-radius: 30px;
+    transition: transform 0.6s;
+    backface-visibility: hidden;
+}
+
+.image-container:hover .music-cover {
+    transform: translateY(-300px);
+}
+
+.background-text {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 100;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: rgba(0, 0, 0, 1);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0);
+    z-index: -1;
+}
+
+.music-title {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.control-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+.play-button,
+.prev-button,
+.next-button {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 300;
+    font-variation-settings:
+    "wdth" 75,
+    "YTLC" 500;
+    background-color: rgb(255, 95, 95);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin-bottom: -3%;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.play-button:hover,
+.prev-button:hover,
+.next-button:hover {
+    background-color: #ff3f3f;
+}
+
+.time-controls,
+.volume-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 20px; /* Increased height */
+    background: #ddd;
+    border-radius: 10px; /* Increased border radius */
+    outline: none;
+    margin: 0 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px; /* Increased thumb size */
+    height: 20px; /* Increased thumb size */
+    background: #ff8e8e;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 30px; /* Increased thumb size */
+    height: 30px; /* Increased thumb size */
+    background: #ff5f5f;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb,
+input[type="range"]:focus::-webkit-slider-thumb {
+    background: #ff3f3f;
+}
+
+input[type="range"]:hover::-moz-range-thumb,
+input[type="range"]:focus::-moz-range-thumb {
+    background: #ff3f3f;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to right, #ff5f5f 0%, #ddd 0%);
+    border-radius: 100px;
+}
+
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to right, #ff5f5f 0%, #ddd 0%);
+    border-radius: 10px;
+}
+
+.volume-indicator {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 300;
+    font-variation-settings:
+    "wdth" 75,
+    "YTLC" 500;
+    position: absolute;
+    bottom: 346px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    pointer-events: none;
+}
+
+.playlist {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 400;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    text-align: center;
+}
+
+.playlist li {
+    padding: 2.5% 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.playlist li:hover,
+.playlist li.active {
+    background-color: #ffdddd;
+    border-radius: 50px;
+}
+
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    color: #dcdcdc;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+header.visible {
+    opacity: 1;
+}
+
+.nav-container {
+    font-family: 'Staatliches', sans-serif;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left {
+    flex: 1;
+}
+
+.nav-right {
+    flex: 3;
+    justify-content: flex-end;
+}
+
+.nav-about, .nav-showreel, .nav-port, .nav-gal, .nav-work {
+    font-family: 'Staatliches', sans-serif;
+    color: #000000;
+    text-decoration: none;
+}
+
+header .back-to-top {
+    text-decoration: none;
+    color: #19ec89;
+    font-family: 'Staatliches', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+header .back-to-top:hover {
+    color: #00b2e2;
+}
+
+header a {
+    text-decoration: none;
+    color: #dcdcdc;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+    margin: 0 1rem;
+}
+
+header a:hover {
+    color: #00b2e2;
+}
+
+/* Hero Section */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    margin-top: 60px; /* Adjust for header height */
+    text-align: center;
+}
+
+.background-video {
+    position: absolute;
+    width: 80%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: cover;
+    border-radius: 20px;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.parallax-text {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #00b2e2;
+    display: flex;
+    font-family: 'Staatliches', sans-serif;
+    position: relative;
+    z-index: 1;
+}
+
+.parallax-text span {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.container:hover .parallax-text span {
+    transform: scale(1.2) translateY(-5px);
+    color: #ffcc00;
+}
+
+.menu-items {
+    font-family: 'Staatliches', sans-serif;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    color: #dcdcdc;
+    transform: scale(0) translate(-50%, -50%);
+}
+
+.menu-items a {
+    font-family: 'Staatliches', sans-serif;
+    text-decoration: none;
+    color: #00b2e2;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.menu-items a:hover {
+    color: #ffcc00;
+}
+
+.head-about{
+    display: contents;
+    font-size: 5rem;
+    font-family: 'Staatliches', sans-serif;
+    color: #ffffff;
+}
+
+.comp-about{
+    font-size: 4vh;
+    font-weight: 700;
+    font-family: 'Staatliches', sans-serif;
+    color: #ffffff;
+}
+
+.comp-aboutli{
+    position: relative;
+    margin-top: 20px;
+    font-size: 1vh;
+    font-weight: 700;
+    font-family: 'Staatliches', sans-serif;
+    color: #ffffff;
+}
+.comp2-about{
+    font-size: 2vh;
+    color: #ffffff;
+}
+
+.head-portfolio{
+    font-family: 'Staatliches', sans-serif;
+    color: #ffffff;
+}
+
+.head-work{
+    font-family: 'Staatliches', sans-serif;
+    color: #ffffff;
+}
+
+.head-gal{
+    font-family: 'Staatliches', sans-serif;
+    color: #ffffff;
+}
+
+.container:hover .menu-items {
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%);
+}
+
+.menu-item-1 { transform: translate(-150px, -150px); }
+.menu-item-2 { transform: translate(150px, -150px); }
+.menu-item-3 { transform: translate(150px, 150px); }
+.menu-item-4 { transform: translate(-150px, 150px); }
+.menu-item-5 { transform: translate(-200px, 150px); }
+
+/* Sections */
+section {
+    padding: 80px 20px;
+    background: #1f1f1f;
+    border-bottom: 1px solid #444;
+    min-height: 100vh;
+    box-sizing: border-box;
+    margin-top: 60px; /* Adjust for header height */
+    text-align: center;
+    color: #dcdcdc;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #00b2e2;
+    font-weight: 700;
+}
+
+section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px; /* Center text and limit width */
+}
+
+/* Alternating Backgrounds */
+section:nth-of-type(even) {
+    background-color: #e7e6e6;
+}
+
+section:nth-of-type(odd) {
+    background-color: #e7e6e6;
+}
+
+/* Portfolio Section Photo Grid */
+.photo-grid {
+    background-color: #e7e6e6;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+
+}
+
+.photo-item {
+    overflow: hidden;
+    height: fit-content;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.1s ease; /* Faster transition for a responsive effect */
+    will-change: transform;
+    position: relative; /* Ensure that the item is positioned relative for proper movement */
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Keep the scale effect on hover */
+}
+
+.photo-item img:hover {
+    transform: scale(1.1);
+}
+
+
+.photo-item a {
+    display: block;
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from the parent */
+}
+
+/* Social Media Section */
+#social-media {
+    width: fill;
+    height: fit-content;
+    padding: 60px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+#social-media h2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #000000;
+    font-weight: 700;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.wrap {
+    color: #ddd;
+    height: fit-content;
+    font-family: 'Staatliches', sans-serif;
+    font-weight: 200;
+}
+
+.social-icons a {
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.social-icons img {
+    width: 40px;
+}

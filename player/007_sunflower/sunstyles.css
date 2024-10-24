@@ -1,0 +1,205 @@
+
+
+
+body {
+    overflow: hidden;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff00;
+}
+
+.music-player {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    width: 100vh;
+    max-width: 300px;
+    margin-bottom: 10px;
+    perspective: 1000px;
+}
+
+.music-cover {
+    width: 100%;
+    border-radius: 30px;
+    transition: transform 0.6s;
+    backface-visibility: hidden;
+}
+
+.image-container:hover .music-cover {
+    transform: translateY(-300px);
+}
+
+.background-text {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    font-size: 23px;
+    color: rgba(0, 0, 0, 1);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0);
+    z-index: -1;
+}
+
+.des-text {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 200;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    font-size: 16px;
+    color: rgba(0, 0, 0, 1);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0);
+    z-index: -1;
+}
+
+.music-title {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.control-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+.play-button,
+.prev-button,
+.next-button {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 300;
+    font-variation-settings:
+    "wdth" 75,
+    "YTLC" 500;
+    background-color: rgb(255, 95, 95);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin-bottom: -3%;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.play-button:hover,
+.prev-button:hover,
+.next-button:hover {
+    background-color: #ff3f3f;
+}
+
+.time-controls,
+.volume-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 20px; /* Increased height */
+    background: #ddd;
+    border-radius: 10px; /* Increased border radius */
+    outline: none;
+    margin: 0 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px; /* Increased thumb size */
+    height: 20px; /* Increased thumb size */
+    background: #ff8e8e;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 30px; /* Increased thumb size */
+    height: 30px; /* Increased thumb size */
+    background: #ff5f5f;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb,
+input[type="range"]:focus::-webkit-slider-thumb {
+    background: #ff3f3f;
+}
+
+input[type="range"]:hover::-moz-range-thumb,
+input[type="range"]:focus::-moz-range-thumb {
+    background: #ff3f3f;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to right, #ff5f5f 0%, #ddd 0%);
+    border-radius: 100px;
+}
+
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to right, #ff5f5f 0%, #ddd 0%);
+    border-radius: 10px;
+}
+
+.volume-indicator {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 300;
+    font-variation-settings:
+    "wdth" 75,
+    "YTLC" 500;
+    position: absolute;
+    bottom: 491px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    pointer-events: none;
+}
+
+.playlist {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 400;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    text-align: center;
+}
+
+.playlist li {
+    padding: 2.5% 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.playlist li:hover,
+.playlist li.active {
+    background-color: #ffdddd;
+    border-radius: 50px;
+}

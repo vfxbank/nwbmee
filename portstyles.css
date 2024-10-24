@@ -60,13 +60,14 @@ header nav ul li a {
 
 #project {
     padding: 80px 20px 20px;
-    background: #1f1f1f;
+    background: #292929;
 }
 
 .container {
     padding-top: 1rem;
+    justify-content: center;
     text-align: left;
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -96,7 +97,7 @@ header nav ul li a {
 .image-gallery {
     display: grid;
     grid-template-columns: 500px 500px 500px;
-    grid-template-rows: auto auto auto auto auto auto auto auto auto auto ;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto  ;
     justify-content: left;
     grid-auto-flow: column;
     gap: 10; /* Increase spacing between images */

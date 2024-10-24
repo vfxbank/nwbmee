@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DCStargirl</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="stargirlstyles.css">
+</head>
+<body>
+
+<div class="music-player">
+    <div class="image-container">
+        <img src="https://dl.dropbox.com/scl/fi/ejfw1vrfe75zfnrybv5vz/cover.jpg?rlkey=df68w85qipsx6atzastb4y86a&dl=1" alt="Music Cover" class="music-cover">
+        <div class="background-text">DC Stargirl
+            <hr>
+        </div>
+        <div class="des-text">Genre : Adventure, Hero, Thriller
+            <hr>Composed for DC's Stargirl Scoring Competition by Spitfire Audio
+        </div>
+    </div>
+    <div class="volume-controls">
+        <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5">
+        <span id="volume" class="volume-indicator">50</span>
+    </div>
+    <audio id="audio"></audio>
+    <div class="music-title">DCStargirl</div>
+    <div class="control-buttons">
+        <button class="prev-button" id="prevButton">◁</button>
+        <button class="play-button" id="playButton">▶</button>
+        <button class="next-button" id="nextButton">▷</button>
+    </div>
+    <div class="time-controls">
+        <span id="playtime" class="time-indicator">0:00</span>
+        <input type="range" id="currentTime" min="0" value="0">
+        <span id="endtime" class="time-indicator">0:00</span>
+    </div>
+    <ul class="playlist" id="playlist">
+        <li data-src="https://dl.dropbox.com/scl/fi/x5uvrzki127onj7s1me92/stargirl.mp3?rlkey=kn5u8tvw1y0otnp13per6tetd&dl=1">DC Stargirl</li>
+    </ul>
+</div>
+
+<script src="https://dl.dropbox.com/scl/fi/0imwty58xrgsw6f4el2uz/script.js?rlkey=t1kn2oiw42bfcip9ir5273w9p&dl=1"></script>
+
+</body>
+</html>
