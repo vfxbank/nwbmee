@@ -233,14 +233,23 @@ header.visible {
 }
 
 .nav-right {
-    flex: 3;
+    flex: 0;
+    display: flex;
     justify-content: flex-end;
+    gap: 10px;
 }
 
-.nav-about, .nav-showreel, .nav-port, .nav-gal, .nav-work {
+.nav-about {
     font-family: 'Staatliches', sans-serif;
     color: #000000;
     text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.nav-about:hover {
+    color: #00b2e2;
 }
 
 header .back-to-top {
@@ -261,12 +270,13 @@ header a {
     color: #dcdcdc;
     font-size: 1.2rem;
     font-weight: 700;
-    transition: color 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
     margin: 0 1rem;
 }
 
 header a:hover {
     color: #00b2e2;
+    transform: scale(1.1);
 }
 
 /* Hero Section */
@@ -401,7 +411,7 @@ section {
     border-bottom: 1px solid #444;
     min-height: 100vh;
     box-sizing: border-box;
-    margin-top: 60px; /* Adjust for header height */
+    margin-top: 60px;
     text-align: center;
     color: #dcdcdc;
 }
@@ -417,10 +427,9 @@ section p {
     font-size: 1.2rem;
     line-height: 1.6;
     margin: 0 auto;
-    max-width: 800px; /* Center text and limit width */
+    max-width: 800px;
 }
 
-/* Alternating Backgrounds */
 section:nth-of-type(even) {
     background-color: #e7e6e6;
 }
@@ -429,7 +438,6 @@ section:nth-of-type(odd) {
     background-color: #e7e6e6;
 }
 
-/* Portfolio Section Photo Grid */
 .photo-grid {
     background-color: #e7e6e6;
     display: grid;
@@ -446,16 +454,16 @@ section:nth-of-type(odd) {
     height: fit-content;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.1s ease; /* Faster transition for a responsive effect */
+    transition: transform 0.1s ease;
     will-change: transform;
-    position: relative; /* Ensure that the item is positioned relative for proper movement */
+    position: relative;
 }
 
 .photo-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease; /* Keep the scale effect on hover */
+    transition: transform 0.3s ease;
 }
 
 .photo-item img:hover {
@@ -465,23 +473,25 @@ section:nth-of-type(odd) {
 
 .photo-item a {
     display: block;
-    text-decoration: none; /* Remove underline from links */
-    color: inherit; /* Inherit color from the parent */
+    text-decoration: none;
+    color: inherit;
 }
 
-/* Social Media Section */
-#social-media {
+.social-media {
     width: fill;
     height: fit-content;
+    position: relative;
+    bottom: 0;
+    width: 100%;
     padding: 60px 20px;
-    background: #ffffff;
+    background: #1E1515;
     text-align: center;
 }
 
-#social-media h2 {
+.social-media h2 {
     font-size: 1rem;
     margin-bottom: 1rem;
-    color: #000000;
+    color: #ffffff;
     font-weight: 700;
 }
 
@@ -498,6 +508,21 @@ section:nth-of-type(odd) {
     height: fit-content;
     font-family: 'Staatliches', sans-serif;
     font-weight: 200;
+}
+
+.wrapthank {
+    font-size: 2rem;
+    color: #ddd;
+    font-family: 'Staatliches', sans-serif;
+    font-weight: 700;
+}
+
+.email {
+    font-size: 1rem;
+    color: #ddd;
+    font-family: 'Staatliches', sans-serif;
+    margin-top: 20px;
+    font-weight: 100;
 }
 
 .social-icons a {
